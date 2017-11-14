@@ -17,7 +17,7 @@ namespace gilded_rose
             {
                 return item.Quality;
             }
-            private set
+            set
             {
                 item.Quality = Math.Max(0, value);
                 item.Quality = Math.Min(50, item.Quality);
@@ -36,16 +36,9 @@ namespace gilded_rose
             }
         }
 
-        public abstract void Update();
-
-        protected void UpdateQuality(int increment = -1)
+        public virtual void Update()
         {
-            Quality += increment;
-        }
-
-        protected void UpdateSellIn(int increment = -1)
-        {
-            SellIn += increment;
+            SellIn--;
         }
     }
 }

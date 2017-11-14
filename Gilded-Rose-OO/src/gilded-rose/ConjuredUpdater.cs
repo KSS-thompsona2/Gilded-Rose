@@ -6,8 +6,8 @@
 
         public override void Update()
         {
-            UpdateSellIn();
-            UpdateQuality(-2);
+            base.Update();
+            Quality -= 2;
         }
     }
 }
